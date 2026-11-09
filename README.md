@@ -4,7 +4,7 @@ RentEase is a monthly rental website for furniture and appliances. Customers can
 
 ## Live Website
 
-https://<your-username>.github.io/rentease/
+https://dhruv-rajani1604.github.io/rentease/
 
 ## Features
 
@@ -33,7 +33,7 @@ rentease/
 ## How to Run Locally
 
 1. Clone the repository:
-2. git clone https://github.com/<Dhruv-Rajani1604>/rentease.git
+2. git clone https://github.com/dhruv-rajani1604/rentease.git
 
 3. 2. Open `index.html` in your browser.
 
@@ -43,4 +43,4 @@ Progress is committed daily. See the **Commits** tab for the full history.
 
 ## Author
 
-<Rajani Dhruv>
+Dhruv Rajani
