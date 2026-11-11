@@ -75,6 +75,68 @@
         font-size: 0.9rem;
         margin-top: 40px;
       }
+      section.page {
+        padding: 40px 0;
+      }
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 18px;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+      }
+      .box,
+      .card {
+        background: #fff;
+        border: 1px solid #fed7aa;
+        border-radius: 12px;
+        padding: 18px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 18px;
+      }
+      .card .icon {
+        font-size: 2.4rem;
+        text-align: center;
+        background: #fff7ed;
+        border-radius: 8px;
+        padding: 18px 0;
+      }
+      .card h3 {
+        margin: 12px 0 6px;
+      }
+      .price {
+        font-weight: bold;
+        color: #ea580c;
+      }
+      .meta {
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+      .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+      .btn-outline {
+        display: inline-block;
+        padding: 12px 22px;
+        border: 2px solid #ea580c;
+        border-radius: 8px;
+        color: #ea580c;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .btn-outline:hover {
+        background: #ea580c;
+        color: #fff;
+      }
     </style>
   </head>
   <body>
@@ -99,6 +161,114 @@
           <a href="#products" class="btn">Browse products</a>
         </div>
       </section>
+      <section class="page">
+        <div class="wrap">
+          <h2>How it works</h2>
+          <div class="steps">
+            <div class="box">
+              <strong>1. Choose an item</strong>
+              <p class="meta">Furniture or appliances for your home.</p>
+            </div>
+            <div class="box">
+              <strong>2. Pick a plan</strong>
+              <p class="meta">
+                3, 6 or 12 months. Longer plans cost less per month.
+              </p>
+            </div>
+            <div class="box">
+              <strong>3. Schedule delivery</strong>
+              <p class="meta">Choose a date and address.</p>
+            </div>
+            <div class="box">
+              <strong>4. Use and return</strong>
+              <p class="meta">Request maintenance any time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="wrap">
+          <h2>Featured products</h2>
+          <div class="grid">
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt_FH56KebJnreuMqVbdoYtaaW1koqBj-913SUcu0yeg&s=10"
+                alt="Queen bed with wooden frame"
+              />
+              <h3>Queen Bed</h3>
+              <p class="price">₹1,200 / month</p>
+              <p class="meta">Deposit ₹3,000</p>
+            </article>
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEm6pcE3CAodjAxKt-BhDvO4RJleQECKzwVtc9xDvEHA&s"
+                alt="3 seater sofa with soft cusion"
+              />
+              <h3>3-Seater Sofa</h3>
+              <p class="price">₹1,500 / month</p>
+              <p class="meta">Deposit ₹4,000</p>
+            </article>
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpPD7Yj_5EmI4M1-0ZzVAuaPNpn7rSx_lJlF4gWio4AA&s=10"
+                alt="Bosch Washing machine"
+              />
+              <h3>Washing Machine</h3>
+              <p class="price">₹1,000 / month</p>
+              <p class="meta">Deposit ₹2,500</p>
+            </article>
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj4hWjm0vvhWZEZCV1D51K17Lm3YJSaXjkHkZgOA1cxw&s=10"
+                alt="43 inch oled Smart Telivison"
+              />
+              <h3>43" Smart TV</h3>
+              <p class="price">₹1,100 / month</p>
+              <p class="meta">Deposit ₹2,800</p>
+            </article>
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUuII4xeboH2SZtWdESsz1GkNZ20ffm5SMLUGN7PPGg&s=10"
+                alt="Four-seater dining table"
+              />
+              <h3>Dining Table</h3>
+              <p class="price">₹800 / month</p>
+              <p class="meta">Deposit ₹2,000</p>
+            </article>
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_CXXhmVAZt-hQO3PWCF59q09hXdakKmyFi93VRtD-A&s=10"
+                alt="Wooden study table with a drawer"
+              />
+              <h3>Study Table</h3>
+              <p class="price">₹600 / month</p>
+              <p class="meta">Deposit ₹1,500</p>
+            </article>
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7xjpfUPrlJMdhATY26Ivprj9UwtNdbentt0nP392p-w&s=10"
+                alt="Double-door fridge"
+              />
+              <h3>Double-Door Fridge</h3>
+              <p class="price">₹1,400 / month</p>
+              <p class="meta">Deposit ₹3,500</p>
+            </article>
+            <article class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUr-HxSdgfZT9P8Y1zfoLSpk6Mc_Yckxkeirdv5xwurg&s=10"
+                alt="Microwave oven on a kitchen counter"
+              />
+              <h3>Microwave Oven</h3>
+              <p class="price">₹400 / month</p>
+              <p class="meta">Deposit ₹1,000</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <div style="text-align: center; margin-top: 24px">
+        <a href="products.html" class="btn-outline">More products</a>
+      </div>
     </main>
 
     <footer>
