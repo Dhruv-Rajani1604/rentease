@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - RentEase</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1e293b;
+        background: #fff7ed;
+        line-height: 1.5;
+      }
+      a {
+        color: inherit;
+      }
+      header {
+        background: #fff;
+        border-bottom: 1px solid #fed7aa;
+      }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: #ea580c;
+        text-decoration: none;
+      }
+      nav a {
+        margin-left: 16px;
+        text-decoration: none;
+      }
+      section.page {
+        padding: 40px 0;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+      }
+      h2 {
+        font-size: 1.3rem;
+        margin: 24px 0 10px;
+      }
+      .breadcrumb {
+        color: #64748b;
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+      }
+      .breadcrumb a {
+        color: #ea580c;
+      }
+      .product-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .product-layout img {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid #fed7aa;
+        display: block;
+      }
+      .price {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #ea580c;
+      }
+      .meta {
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+      .tenures {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 12px 0;
+      }
+      .tenures label {
+        border: 1px solid #fed7aa;
+        border-radius: 10px;
+        padding: 10px 14px;
+        background: #fff;
+        cursor: pointer;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 8px;
+        background: #ea580c;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      footer {
+        background: #fff;
+        border-top: 1px solid #fed7aa;
+        padding: 22px 0;
+        color: #64748b;
+        font-size: 0.9rem;
+        margin-top: 40px;
+      }
+      @media (max-width: 720px) {
+        .product-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap bar">
+        <a href="index.html" class="logo">RentEase</a>
+        <nav>
+          <a href="products.html">Products</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page">
+        <div class="wrap">
+          <p class="breadcrumb">
+            <a href="products.html">Products</a> / Queen Bed
+          </p>
+
+          <div class="product-layout">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt_FH56KebJnreuMqVbdoYtaaW1koqBj-913SUcu0yeg&s=10"
+              alt="Queen bed with wooden frame"
+            />
+
+            <div>
+              <h1>Queen Bed</h1>
+              <p class="meta">
+                A solid queen bed frame that is easy to assemble and move.
+              </p>
+              <p class="meta" style="margin-top: 12px">In stock: 4 available</p>
+
+              <h2>Monthly rent</h2>
+              <p class="price">₹1,200 / month</p>
+              <p class="meta">Security deposit: ₹3,000</p>
+
+              <h2>Choose your rental period</h2>
+              <div class="tenures">
+                <label
+                  ><input type="radio" name="tenure" value="3" />3 months</label
+                >
+                <label
+                  ><input type="radio" name="tenure" value="6" checked />6
+                  months</label
+                >
+                <label
+                  ><input type="radio" name="tenure" value="12" />12
+                  months</label
+                >
+              </div>
+              <p class="meta">Longer plans cost less per month.</p>
+
+              <p style="margin-top: 20px">
+                <button class="btn">Add to cart</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        RentEase - Furniture & Appliance Rental Platform. Sample products and
+        prices.
+      </div>
+    </footer>
+  </body>
+</html>
