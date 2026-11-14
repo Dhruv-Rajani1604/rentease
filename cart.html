@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - RentEase</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1e293b;
+            background: #fff7ed;
+            line-height: 1.5;
+        }
+        a{
+            color: inherit;
+        }
+        header{
+            background: #fff;
+            border-bottom: 1px solid #fff7aa;
+        }
+        .wrap{
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        .logo{
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #ea580c;
+            text-decoration: none;
+        }
+        nav a{
+            margin-left: 16px;
+            text-decoration: none;
+        }
+        section.page{
+            padding: 40px 0;
+        }
+        h1{
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+        .cart-layout{
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 24px;
+            align-items: start;
+        }
+        .panel{
+            background: #fff;
+            border: 1px solid #fff7aa;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .cart-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+         .cart-item + .cart-item{
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #fed7aa;
+        }
+        .price{
+            font-weight: bold;
+            color: #ea580c;
+        }
+        .meta{
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .btn{
+            display: inline-block;
+            width: 100%;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background: #ea580c;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-small{
+            width: auto;
+            padding: 8px 14px;
+            background: #fff;
+            color: #ea580c;
+            border: 1px solid #ea580c;
+            font-size: 0.9rem;
+        }
+        .summary-row{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .summary-row.total{
+            font-weight: bold;
+            border-top: 1px solid #fff7aa;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        footer{
+            background: #fff;
+            border-top: 1px solid #fed7aa;
+            padding: 22px 0;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+        @media (max-width: 720px){
+            .card-layout{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap bar">
+            <a href="index.html" class="logo">RentEase</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page">
+            <div class="wrap">
+                <h1>Your cart</h1>
+
+                <div class="card-layout">
+                    <div class="panel">
+                        <div class="cart-item">
+                            <div>
+                                <strong>Queen Bed</strong>
+                                <p class="meta">6 months</p>
+                            </div>
+                            <div>
+                                <p class="price">₹1,200 / month</p>
+                                <p class="meta">Deposit ₹3,000</p>
+                            </div>
+                            <button class="btn btn-small">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <h2 style="font-size: 1.2rem; margin-bottom: 14px;">Summary</h2>
+                        <div class="summary-row">
+                            <span>Monthly total</span>
+                            <span>₹1,200</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Deposits</span>
+                            <span>₹3,000</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total to pay now</span>
+                            <span>₹3,000</span>
+                        </div>
+                        <a href="checkout.html" class="btn" style="margin-top: 16px;">Continue to checkout</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            RentEase - Furniture & Appliance Rental Platform. Sample products and prices.
+        </div>
+    </footer>
+</body>
+</html>

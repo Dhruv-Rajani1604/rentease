@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RentEase</title>
+    <style>
+         *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+         body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1e293b;
+            background: #fff7ed;
+            line-height: 1.5;
+        }
+        a{
+            color: inherit;
+        }
+        header{
+            background: #fff;
+            border-bottom: 1px solid #fed7aa;
+        }
+        .wrap{
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        .logo{
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #ea580c;
+            text-decoration: none;
+        }
+         nav a{
+            margin-left: 16px;
+            text-decoration: none;
+        }
+        section.page{
+            padding: 40px 0;
+        }
+        h1{
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+        .checkout-layout{
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 24px;
+            align-items: start;
+        }
+        .panel{
+            background: #fff;
+            border: 1px solid #fed7aa;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .field{
+            margin-bottom: 16px;
+        }
+        .field label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .field input,
+        .field textarea{
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #fed7aa;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .field textarea{
+            min-height: 90px;
+            resize: vertical;
+        }
+         .btn{
+            display: inline-block;
+            width: 100%;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background: #ea580c;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+        }
+        .meta{
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .summary-row{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+         .summary-row.total{
+            font-weight: bold;
+            border-top: 1px solid #fed7aa;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        footer{
+            background: #fff;
+            border-top: 1px solid #fed7aa;
+            padding: 22px 0;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+        @media (max-width: 720px){
+            .checkout-layout{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap bar">
+            <a href="index.html" class="logo">RentEase</a>
+            <nav>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page">
+            <div class="wrap">
+                <h1>Checkout</h1>
+
+                <div class="checkout-layout">
+                    <div class="panel">
+                        <form>
+                            <div class="field">
+                                <label for="name">Full name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="field">
+                                <label for="address">Delivery address</label>
+                                <textarea name="address" id="address" required></textarea>
+                            </div>
+                            <div class="field">
+                                <label for="delivery">Delivery date</label>
+                                <input type="date" id="delivery" name="delivery" required>
+                            </div>
+                            <p class="meta" style="margin-bottom: 16px;">Demo checkout: no real payment is taken.</p>
+                            <button type="submit" class="btn">Confirm rental</button>
+                        </form>
+                    </div>
+                     <div class="panel">
+                        <h2 style="font-size: 1.2rem; margin-bottom: 14px;">Order summary</h2>
+                        <p><strong>Queen Bed</strong></p>
+                        <p class="meta">6 months</p>
+                        <div class="summary-row" style="margin-top: 14px;">
+                            <span>Monthly total</span>
+                            <span>₹1,200</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Deposit</span>
+                            <span>₹3,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            RentEase - Furniture & Appliance Rental Platform. Sample products and prices.
+        </div>
+    </footer>
+</body>
+</html>
