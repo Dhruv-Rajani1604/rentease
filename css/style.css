@@ -15,6 +15,9 @@ a{
 header{
     background: #fff;
     border-bottom: 1px solid #fed7aa;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 .wrap{
     max-width: 1100px;
@@ -25,7 +28,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 64px;
+    padding: 10px 0;
 }
 .logo{
     font-weight: bold;
@@ -33,10 +39,26 @@ header{
     color: #ea580c;
     text-decoration: none;
 }
-nav a{
-    margin-left: 16px;
-    text-decoration: none;
+nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
+nav a{
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1e293b;
+}
+nav a:hover{
+    background: #fff7ed;
+    color: #ea580c;
+}
+nav a.active{
+    background: #ea580c;
+    color: #fff;
+}   
 footer{
     background: #fff;
     border-top: 1px solid #fed7aa;
