@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products - RentEase</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <style>
       section.page {
         padding: 40px 0;
@@ -38,35 +38,6 @@
         font-size: 0.9rem;
         cursor: pointer;
       }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 18px;
-      }
-      .card {
-        background: #fff;
-        border: 1px solid #fed7aa;
-        border-radius: 12px;
-        padding: 18px;
-      }
-      .card img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-        border-radius: 8px;
-        display: block;
-      }
-      .card h3 {
-        margin: 12px 0 6px;
-      }
-      .price {
-        font-weight: bold;
-        color: #ea580c;
-      }
-      .meta {
-        color: #64748b;
-        font-size: 0.9rem;
-      }
     </style>
   </head>
   <body>
@@ -74,6 +45,7 @@
       <div class="wrap bar">
         <a href="index.html" class="logo">RentEase</a>
         <nav>
+          <a href="index.html">Home</a>
           <a href="products.html" class="active">Products</a>
           <a href="cart.html">Cart</a>
           <a href="login.html">Login</a>
@@ -91,7 +63,7 @@
             <input
               type="search"
               class="search"
-              placeholder="Search Products"
+              placeholder="Search products"
               aria-label="Search products"
             />
             <button class="chip">All</button>
@@ -102,62 +74,56 @@
           <h2>Furniture</h2>
           <div class="grid">
             <article class="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt_FH56KebJnreuMqVbdoYtaaW1koqBj-913SUcu0yeg&s=10"
-                alt="Queen Bed with wooden frame"
-              />
+              <img src="images/bed.jpg" alt="Queen bed with wooden frame" />
               <h3><a href="product.html">Queen Bed</a></h3>
               <p class="price">₹1,200 / month</p>
               <p class="meta">Deposit ₹3,000</p>
             </article>
             <article class="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEm6pcE3CAodjAxKt-BhDvO4RJleQECKzwVtc9xDvEHA&s"
-                alt="Three-seater fabric sofa"
-              />
+              <img src="images/sofa.jpg" alt="Three-seater fabric sofa" />
               <h3>3-Seater Sofa</h3>
               <p class="price">₹1,500 / month</p>
               <p class="meta">Deposit ₹4,000</p>
             </article>
             <article class="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUuII4xeboH2SZtWdESsz1GkNZ20ffm5SMLUGN7PPGg&s=10"
-                alt="Four-seater dining table"
-              />
+              <img src="images/dining-table.jpg" alt="Four-seater dining table" />
               <h3>Dining Table</h3>
               <p class="price">₹800 / month</p>
               <p class="meta">Deposit ₹2,000</p>
+            </article>
+            <article class="card">
+              <img src="images/study-table.jpg" alt="Wooden study table with a drawer" />
+              <h3>Study Table</h3>
+              <p class="price">₹600 / month</p>
+              <p class="meta">Deposit ₹1,500</p>
             </article>
           </div>
 
           <h2>Appliances</h2>
           <div class="grid">
             <article class="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7xjpfUPrlJMdhATY26Ivprj9UwtNdbentt0nP392p-w&s=10"
-                alt="Double-Door fridge"
-              />
+              <img src="images/fridge.jpg" alt="Double-door fridge" />
               <h3>Double-Door Fridge</h3>
               <p class="price">₹1,400 / month</p>
               <p class="meta">Deposit ₹3,500</p>
             </article>
             <article class="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpPD7Yj_5EmI4M1-0ZzVAuaPNpn7rSx_lJlF4gWio4AA&s=10"
-                alt="Front-Load washing machine"
-              />
+              <img src="images/washing-machine.jpg" alt="Front-load washing machine" />
               <h3>Washing Machine</h3>
               <p class="price">₹1,000 / month</p>
               <p class="meta">Deposit ₹2,500</p>
             </article>
             <article class="card">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj4hWjm0vvhWZEZCV1D51K17Lm3YJSaXjkHkZgOA1cxw&s=10"
-                alt="43-inch smart TV"
-              />
+              <img src="images/tv.jpg" alt="43-inch smart TV" />
               <h3>43" Smart TV</h3>
               <p class="price">₹1,100 / month</p>
               <p class="meta">Deposit ₹2,800</p>
+            </article>
+            <article class="card">
+              <img src="images/microwave.jpg" alt="Microwave oven on a kitchen counter" />
+              <h3>Microwave Oven</h3>
+              <p class="price">₹400 / month</p>
+              <p class="meta">Deposit ₹1,000</p>
             </article>
           </div>
         </div>
@@ -166,8 +132,7 @@
 
     <footer>
       <div class="wrap">
-        RentEase - Furniture & Appliance Rental Platform. Sample products and
-        prices.
+        RentEase – Furniture & Appliance Rental Platform. Sample products and prices.
       </div>
     </footer>
   </body>
