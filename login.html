@@ -1,94 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - RentEase</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - RentEase</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        section.page{
-            padding: 40px 0;
+      section.page {
+        padding: 40px 0;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+      }
+      h2 {
+        font-size: 1.3rem;
+        margin: 24px 0 10px;
+      }
+      .breadcrumb {
+        color: #64748b;
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+      }
+      .breadcrumb a {
+        color: #ea580c;
+      }
+      .product-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .product-layout img {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid #fed7aa;
+        display: block;
+      }
+      .tenures {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 12px 0;
+      }
+      .tenures label {
+        border: 1px solid #fed7aa;
+        border-radius: 10px;
+        padding: 10px 14px;
+        background: #fff;
+        cursor: pointer;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 8px;
+        background: #ea580c;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      @media (max-width: 720px) {
+        .product-layout {
+          grid-template-columns: 1fr;
         }
-        h1{
-            font-size: 2rem;
-            margin-bottom: 18px;
-        }
-        .auth-box{
-            background: #fff;
-            border: 1px solid #fed7aa;
-            border-radius: 12px;
-            padding: 28px;
-            max-width: 420px;
-            margin: 0 auto;
-        }
-        .field{
-            margin-bottom: 16px;
-        }
-        .field label{
-            display: block;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-        .field input{
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #fed7aa;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-        .btn{
-            display: inline-block;
-            width: 100%;
-            padding: 12px 22px;
-            border-radius: 8px;
-            background: #ea580c;
-            color: #fff;
-            font-weight: bold;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="wrap bar">
-            <a href="index.html" class="logo">RentEase</a>
-            <nav>
-                <a href="products.html">Products</a>
-                <a href="cart.html">Cart</a>
-                <a href="login.html" class="active">Login</a>
-                <a href="faq.html">FAQ</a>
-            </nav>
-        </div>
+      <div class="wrap bar">
+        <a href="index.html" class="logo">RentEase</a>
+        <nav>
+          <a href="products.html" class="active">Products</a>
+          <a href="cart.html">Cart</a>
+          <a href="login.html">Login</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section class="page">
-            <div class="wrap">
-                <h1>Login</h1>
-                <div class="auth-box">
-                    <form>
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                        </div>
-                        <div class="field">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                        </div>
-                        <button type="submit" class="btn">Login</button>
-                    </form>
-                    <p class="meta">New here? <a href="#">Create an account</a></p>
-                </div>
+      <section class="page">
+        <div class="wrap">
+          <p class="breadcrumb">
+            <a href="products.html">Products</a> / Queen Bed
+          </p>
+
+          <div class="product-layout">
+            <img
+              src="images/bed.jpg"
+              alt="Queen bed with wooden frame"
+            />
+
+            <div>
+              <h1>Queen Bed</h1>
+              <p class="meta">
+                A solid queen bed frame that is easy to assemble and move.
+              </p>
+              <p class="meta" style="margin-top: 12px">In stock: 4 available</p>
+
+              <h2>Monthly rent</h2>
+              <p class="price">₹1,200 / month</p>
+              <p class="meta">Security deposit: ₹3,000</p>
+
+              <h2>Choose your rental period</h2>
+              <div class="tenures">
+                <label
+                  ><input type="radio" name="tenure" value="3" />3 months</label
+                >
+                <label
+                  ><input type="radio" name="tenure" value="6" checked />6
+                  months</label
+                >
+                <label
+                  ><input type="radio" name="tenure" value="12" />12
+                  months</label
+                >
+              </div>
+              <p class="meta">Longer plans cost less per month.</p>
+
+              <p style="margin-top: 20px">
+                <button class="btn">Add to cart</button>
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="wrap">
-            RentEase - Furniture & Appliance Rental Platform. Sample products and prices.
-        </div>
+      <div class="wrap">
+        RentEase - Furniture & Appliance Rental Platform. Sample products and
+        prices.
+      </div>
     </footer>
-</body>
+  </body>
 </html>
