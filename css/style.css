@@ -154,6 +154,11 @@ section.page{
 .card h3 a:hover{
     color: #ea580c;
 }
+.card .btn,
+.card .btn-outline{
+    margin-top: auto;
+    text-align: center;
+}
 .price{
     font-weight: bold;
     color: #ea580c;
@@ -162,8 +167,28 @@ section.page{
     color: #64748b;
     font-size: 0.9rem;
 }
+.status{
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #166534;
+}
+.status.returned{
+    background: #e2e8f0;
+    color: #334155;
+}
 
 /* Buttons */
+.btn,
+.btn-outline,
+.btn-small{
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
 .btn{
     display: inline-block;
     min-height: 44px;
@@ -172,9 +197,25 @@ section.page{
     background: #ea580c;
     color: #fff;
     font-weight: bold;
-    border: none;
     font-size: 1rem;
-    cursor: pointer;
+    border: 2px solid #ea580c;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover{
+    background: #c2410c;
+    border-color: #c2410c;
+}
+.btn-outline{
+    display: inline-block;
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 2px solid #ea580c;
+    border-radius: 8px;
+    background: transparent;
+    color: #ea580c;
+    font-weight: bold;
+    font-size: 1rem;
     text-align: center;
     text-decoration: none;
 }
@@ -184,25 +225,64 @@ section.page{
 }
 .btn-small{
     min-height: auto;
-    width: auto;
     padding: 8px 14px;
+    border: 1px solid #ea580c;
+    border-radius: 8px;
     background: #fff;
     color: #ea580c;
-    border: 1px solid #ea580c;
     font-size: 0.9rem;
-}
-.btn-outline{
-    display: inline-block;
-    padding: 12px 22px;
-    border: 2px solid #ea580c;
-    border-radius: 8px;
-    color: #ea580c;
     font-weight: bold;
-    text-decoration: none;
+}
+.btn-small:hover{
+    background: #fff7ed;
+}
+
+/* Forms */
+.field{
+    margin-bottom: 16px;
+}
+.field label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.field input,
+.field textarea,
+.field select,
+.search{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    background: #fff;
+    color: #1e293b;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.field textarea{
+    min-height: 90px;
+    resize: vertical;
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus,
+.search:focus{
+    outline: none;
+    border-color: #ea580c;
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
+}
+button:focus-visible,
+a:focus-visible{
+    outline: 3px solid #ea580c;
+    outline-offset: 2px;
+}
+.form-hint{
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
 }
 
 /* Products page controls */
-
 .controls{
     display: flex;
     gap: 10px;
@@ -211,12 +291,7 @@ section.page{
 }
 .search{
     flex: 1 1 220px;
-    width: 100%;
-    min-height: 0;
-    padding: 10px 12px;
-    border: 1px solid #fed7aa;
-    border-radius: 8px;
-    font-size: 1rem;
+    min-width: 0;
 }
 .chip{
     padding: 8px 16px;
@@ -226,6 +301,9 @@ section.page{
     color: #1e293b;
     font-size: 0.9rem;
     cursor: pointer;
+}
+.chip:hover{
+    border-color: #ea580c;
 }
 
 /* Product details page */
@@ -300,6 +378,16 @@ section.page{
     border-top: 1px solid #fed7aa;
     padding-top: 10px;
     margin-top: 10px;
+}
+
+/* Auth box (login) */
+.auth-box{
+    background: #fff;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    padding: 28px;
+    max-width: 420px;
+    margin: 0 auto;
 }
 
 footer{
