@@ -5,40 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products - RentEase</title>
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      section.page {
-        padding: 40px 0;
-      }
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 18px;
-      }
-      h2 {
-        font-size: 1.6rem;
-        margin: 30px 0 18px;
-      }
-      .controls {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-bottom: 18px;
-      }
-      .search {
-        flex: 1 1 260px;
-        padding: 10px 12px;
-        border: 1px solid #fed7aa;
-        border-radius: 8px;
-        font-size: 1rem;
-      }
-      .chip {
-        padding: 8px 16px;
-        border: 1px solid #fed7aa;
-        border-radius: 999px;
-        background: #fff;
-        font-size: 0.9rem;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -73,72 +39,9 @@
           </div>
 
           <h2>Furniture</h2>
-          <div class="grid">
-            <article class="card">
-              <img src="images/bed.jpg" alt="Queen bed with wooden frame" />
-              <h3><a href="product.html">Queen Bed</a></h3>
-              <p class="price">₹1,200 / month</p>
-              <p class="meta">Deposit ₹3,000</p>
-            </article>
-            <article class="card">
-              <img src="images/sofa.jpg" alt="Three-seater fabric sofa" />
-              <h3>3-Seater Sofa</h3>
-              <p class="price">₹1,500 / month</p>
-              <p class="meta">Deposit ₹4,000</p>
-            </article>
-            <article class="card">
-              <img
-                src="images/dining-table.jpg"
-                alt="Four-seater dining table"
-              />
-              <h3>Dining Table</h3>
-              <p class="price">₹800 / month</p>
-              <p class="meta">Deposit ₹2,000</p>
-            </article>
-            <article class="card">
-              <img
-                src="images/study-table.jpg"
-                alt="Wooden study table with a drawer"
-              />
-              <h3>Study Table</h3>
-              <p class="price">₹600 / month</p>
-              <p class="meta">Deposit ₹1,500</p>
-            </article>
-          </div>
-
+          <div class="grid" id="furniture-grid"></div>
           <h2>Appliances</h2>
-          <div class="grid">
-            <article class="card">
-              <img src="images/fridge.jpg" alt="Double-door fridge" />
-              <h3>Double-Door Fridge</h3>
-              <p class="price">₹1,400 / month</p>
-              <p class="meta">Deposit ₹3,500</p>
-            </article>
-            <article class="card">
-              <img
-                src="images/washing-machine.jpg"
-                alt="Front-load washing machine"
-              />
-              <h3>Washing Machine</h3>
-              <p class="price">₹1,000 / month</p>
-              <p class="meta">Deposit ₹2,500</p>
-            </article>
-            <article class="card">
-              <img src="images/tv.jpg" alt="43-inch smart TV" />
-              <h3>43" Smart TV</h3>
-              <p class="price">₹1,100 / month</p>
-              <p class="meta">Deposit ₹2,800</p>
-            </article>
-            <article class="card">
-              <img
-                src="images/microwave.jpg"
-                alt="Microwave oven on a kitchen counter"
-              />
-              <h3>Microwave Oven</h3>
-              <p class="price">₹400 / month</p>
-              <p class="meta">Deposit ₹1,000</p>
-            </article>
-          </div>
+         <div class="grid" id="appliance-grid"></div>
         </div>
       </section>
     </main>
@@ -149,5 +52,7 @@
         prices.
       </div>
     </footer>
+
+    <script src="js/products.js" defer></script>
   </body>
 </html>
