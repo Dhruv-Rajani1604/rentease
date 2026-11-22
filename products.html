@@ -19,7 +19,7 @@
           <a href="faq.html">FAQ</a>
         </nav>
       </div>
-    </header>
+    </header>   
 
     <main>
       <section class="page">
@@ -29,19 +29,35 @@
           <div class="controls">
             <input
               type="search"
+              id="search"
               class="search"
               placeholder="Search products"
               aria-label="Search products"
             />
-            <button class="chip">All</button>
-            <button class="chip">Furniture</button>
-            <button class="chip">Appliances</button>
+            <button class="chip" data-category="all" aria-pressed="true">
+              All
+            </button>
+            <button class="chip" data-category="furniture" aria-pressed="false">
+              Furniture
+            </button>
+            <button
+              class="chip"
+              data-category="appliances"
+              aria-pressed="false"
+            >
+              Appliances
+            </button>
           </div>
+
+          <p id="no-results" class="form-hint" style="display: none">
+            No products match your search.
+          </p>
 
           <h2>Furniture</h2>
           <div class="grid" id="furniture-grid"></div>
+
           <h2>Appliances</h2>
-         <div class="grid" id="appliance-grid"></div>
+          <div class="grid" id="appliance-grid"></div>
         </div>
       </section>
     </main>
