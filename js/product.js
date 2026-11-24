@@ -92,7 +92,6 @@ function money(amount) {
   return "₹" + Math.round(amount).toLocaleString("en-IN");
 }
 
-// Discount for each rental period
 function discountFor(months) {
   if (months === 12) return 0.1;
   if (months === 6) return 0.05;
@@ -121,6 +120,25 @@ function updateCalc() {
   document.getElementById("calc-saving").textContent = money(saving);
 }
 
+function addToCart() {
+  const button = document.getElementById("add-to-cart");
+  const result = Cart.add({
+    id: product.id,
+    name: product.name,
+    image: product.image,
+    alt: product.alt,
+    rent: product.rent,
+    deposit: product.deposit,
+    months: selectedMonths(),
+  });
+
+  button.textContent =
+    result === "updated" ? "Period updated ✓" : "Added to cart ✓";
+  setTimeout(() => {
+    button.textContent = "Add to cart";
+  }, 1500);
+}
+
 function showProduct() {
   if (!product) {
     content.style.display = "none";
@@ -140,6 +158,7 @@ function showProduct() {
   document.querySelectorAll('input[name="tenure"]').forEach((input) => {
     input.addEventListener("change", updateCalc);
   });
+  document.getElementById("add-to-cart").addEventListener("click", addToCart);
 
   updateCalc();
 }

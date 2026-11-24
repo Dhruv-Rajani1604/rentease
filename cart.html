@@ -5,77 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Cart - RentEase</title>
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      section.page {
-        padding: 40px 0;
-      }
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 18px;
-      }
-      .cart-layout {
-        display: grid;
-        grid-template-columns: 1fr 320px;
-        gap: 24px;
-        align-items: start;
-      }
-      .panel {
-        background: #fff;
-        border: 1px solid #fed7aa;
-        border-radius: 12px;
-        padding: 20px;
-      }
-      .cart-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .cart-item + .cart-item {
-        margin-top: 16px;
-        padding-top: 16px;
-        border-top: 1px solid #fed7aa;
-      }
-      .btn {
-        display: inline-block;
-        width: 100%;
-        padding: 12px 22px;
-        border-radius: 8px;
-        background: #ea580c;
-        color: #fff;
-        font-weight: bold;
-        border: none;
-        font-size: 1rem;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-      }
-      .btn-small {
-        width: auto;
-        padding: 8px 14px;
-        background: #fff;
-        color: #ea580c;
-        border: 1px solid #ea580c;
-        font-size: 0.9rem;
-      }
-      .summary-row {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-      }
-      .summary-row.total {
-        font-weight: bold;
-        border-top: 1px solid #fed7aa;
-        padding-top: 10px;
-        margin-top: 10px;
-      }
-      @media (max-width: 720px) {
-        .cart-layout {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -97,36 +26,29 @@
         <div class="wrap">
           <h1>Your cart</h1>
 
-          <div class="cart-layout">
-            <div class="panel">
-              <div class="cart-item">
-                <div>
-                  <strong>Queen Bed</strong>
-                  <p class="meta">6 months</p>
-                </div>
-                <div>
-                  <p class="price">₹1,200 / month</p>
-                  <p class="meta">Deposit ₹3,000</p>
-                </div>
-                <button class="btn btn-small">Remove</button>
-              </div>
-            </div>
+          <p id="empty-cart" class="form-hint" style="display: none">
+            Your cart is empty. <a href="products.html">Browse products</a>
+          </p>
 
-            <div class="panel">
+          <div class="cart-layout">
+            <div id="cart-items"></div>
+
+            <div class="panel" id="summary" style="display: none">
               <h2 style="font-size: 1.2rem; margin-bottom: 14px">Summary</h2>
               <div class="summary-row">
-                <span>Monthly total</span>
-                <span>₹1,200</span>
+                <span>Monthly total</span><span id="sum-monthly"></span>
               </div>
               <div class="summary-row">
-                <span>Deposits</span>
-                <span>₹3,000</span>
+                <span>Deposits</span><span id="sum-deposits"></span>
               </div>
               <div class="summary-row total">
-                <span>Total to pay now</span>
-                <span>₹3,000</span>
+                <span>Pay now (first month + deposits)</span
+                ><span id="sum-paynow"></span>
               </div>
-              <a href="checkout.html" class="btn" style="margin-top: 16px"
+              <a
+                href="checkout.html"
+                class="btn"
+                style="margin-top: 16px; display: block"
                 >Continue to checkout</a
               >
             </div>
@@ -137,9 +59,11 @@
 
     <footer>
       <div class="wrap">
-        RentEase - Furniture & Appliance Rental Platform. Sample products and
+        RentEase – Furniture & Appliance Rental Platform. Sample products and
         prices.
       </div>
     </footer>
+
+    <script src="js/cart.js" defer></script>
   </body>
 </html>
