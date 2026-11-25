@@ -5,77 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout - RentEase</title>
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      section.page {
-        padding: 40px 0;
-      }
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 18px;
-      }
-      .checkout-layout {
-        display: grid;
-        grid-template-columns: 1fr 320px;
-        gap: 24px;
-        align-items: start;
-      }
-      .panel {
-        background: #fff;
-        border: 1px solid #fed7aa;
-        border-radius: 12px;
-        padding: 20px;
-      }
-      .field {
-        margin-bottom: 16px;
-      }
-      .field label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 6px;
-      }
-      .field input,
-      .field textarea {
-        width: 100%;
-        padding: 10px 12px;
-        border: 1px solid #fed7aa;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-family: inherit;
-      }
-      .field textarea {
-        min-height: 90px;
-        resize: vertical;
-      }
-      .btn {
-        display: inline-block;
-        width: 100%;
-        padding: 12px 22px;
-        border-radius: 8px;
-        background: #ea580c;
-        color: #fff;
-        font-weight: bold;
-        border: none;
-        font-size: 1rem;
-        cursor: pointer;
-        text-align: center;
-      }
-      .summary-row {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-      }
-      .summary-row.total {
-        font-weight: bold;
-        border-top: 1px solid #fed7aa;
-        padding-top: 10px;
-        margin-top: 10px;
-      }
-      @media (max-width: 720px) {
-        .checkout-layout {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -97,46 +26,50 @@
         <div class="wrap">
           <h1>Checkout</h1>
 
+          <p id="empty-cart" class="form-hint" style="display: none">
+            Your cart is empty. <a href="products.html">Browse products</a>
+          </p>
+
           <div class="checkout-layout">
-            <div class="panel">
-              <form>
-                <div class="field">
-                  <label for="name">Full name</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <div class="field">
-                  <label for="address">Delivery address</label>
-                  <textarea name="address" id="address" required></textarea>
-                </div>
-                <div class="field">
-                  <label for="delivery">Delivery date</label>
-                  <input type="date" id="delivery" name="delivery" required />
-                </div>
-                <p class="meta" style="margin-bottom: 16px">
-                  Demo checkout: no real payment is taken.
-                </p>
-                <button type="submit" class="btn">Confirm rental</button>
-              </form>
-            </div>
-            <div class="panel">
-              <h2 style="font-size: 1.2rem; margin-bottom: 14px">
-                Order summary
-              </h2>
-              <p><strong>Queen Bed</strong></p>
-              <p class="meta">6 months</p>
-              <div class="summary-row" style="margin-top: 14px">
-                <span>Monthly total</span>
-                <span>₹1,200</span>
+            <form class="panel" id="checkout-form" novalidate>
+              <div class="field">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" autocomplete="name" />
+                <div class="field-error" id="name-error"></div>
               </div>
-              <div class="summary-row total">
-                <span>Deposit</span>
-                <span>₹3,000</span>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                />
+                <div class="field-error" id="email-error"></div>
               </div>
-            </div>
+
+              <div class="field">
+                <label for="address">Delivery address</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  autocomplete="street-address"
+                ></textarea>
+                <div class="field-error" id="address-error"></div>
+              </div>
+
+              <div class="field">
+                <label for="delivery">Delivery date</label>
+                <input type="date" id="delivery" name="delivery" />
+                <div class="field-error" id="delivery-error"></div>
+              </div>
+
+              <p class="form-hint">Demo checkout: no real payment is taken.</p>
+              <button type="submit" class="btn">Confirm rental</button>
+            </form>
+
+            <div class="panel" id="checkout-summary"></div>
           </div>
         </div>
       </section>
@@ -144,9 +77,12 @@
 
     <footer>
       <div class="wrap">
-        RentEase - Furniture & Appliance Rental Platform. Sample products and
+        RentEase – Furniture & Appliance Rental Platform. Sample products and
         prices.
       </div>
     </footer>
+
+    <script src="js/cart.js" defer></script>
+    <script src="js/checkout.js" defer></script>
   </body>
 </html>
