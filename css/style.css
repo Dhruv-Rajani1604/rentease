@@ -407,6 +407,24 @@ a:focus-visible {
 .field textarea[aria-invalid="true"] {
   border-color: #b91c1c;
 }
+.maint-form{
+  margin-top: 14px;
+}
+.requests{
+  margin-top: 12px;
+}
+.request-item{
+  border-top: 1px dashed #fed7aa;
+  padding: 10px 0;
+  font-size: 0.95rem;
+}
+.request-item p{
+  margin-top: 6px;
+}
+.status.open{
+  background: #ffedd5;
+  color: #9a3412;
+}
 
 footer {
   background: #fff;
