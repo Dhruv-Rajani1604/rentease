@@ -1,4 +1,5 @@
-const products = [
+// Local copy of the products, used only if the server cannot be reached
+const localProducts = [
   {
     id: 1,
     name: "Queen Bed",
@@ -73,6 +74,9 @@ const products = [
   },
 ];
 
+// The list the page is showing. Starts as the local copy, then the server's copy replaces it.
+let products = localProducts;
+
 // Current filter settings
 let searchText = "";
 let selectedCategory = "all";
@@ -113,9 +117,10 @@ function showProducts() {
   const furniture = list.filter((p) => p.category === "furniture");
   const appliances = list.filter((p) => p.category === "appliances");
 
-  // Hide a section heading and grid when it has nothing to show
   furnitureGrid.innerHTML = furniture.map(cardHTML).join("");
   applianceGrid.innerHTML = appliances.map(cardHTML).join("");
+
+  // Hide a section heading and grid when it has nothing to show
   furnitureGrid.previousElementSibling.style.display = furniture.length
     ? ""
     : "none";
@@ -133,6 +138,26 @@ function highlightChip() {
   });
 }
 
+// Fetches the product list from the server.
+// If the server is off or the request fails, the local copy stays in use.
+async function loadProducts() {
+  try {
+    const response = await fetch("/api/products");
+    if (!response.ok) {
+      throw new Error("Server returned status " + response.status);
+    }
+    const data = await response.json();
+    if (!Array.isArray(data)) {
+      throw new Error("Unexpected data from server");
+    }
+    products = data;
+    console.log("Products loaded from the server");
+  } catch (error) {
+    products = localProducts;
+    console.warn("Using the local product list:", error.message);
+  }
+}
+
 // Search: redraw on every keystroke
 searchBox.addEventListener("input", () => {
   searchText = searchBox.value;
@@ -148,5 +173,8 @@ chips.forEach((chip) => {
   });
 });
 
+// Show the local cards straight away, then replace them with the server's list
 highlightChip();
 showProducts();
+
+loadProducts().then(showProducts);
